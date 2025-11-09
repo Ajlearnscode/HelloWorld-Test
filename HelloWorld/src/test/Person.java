@@ -3,10 +3,14 @@ package test;
 public class Person {
 
 	private String name;
+	private int id;
+	private int age;
 	
 	//Primary COnstructor
-	public Person(String name) {
+	public Person(String name, int id, int age) {
 		this.name = name;
+		this.id = id;
+		this.age = age;
 	}
 
 	public String getName() {
@@ -17,7 +21,26 @@ public class Person {
 		this.name = name;
 	}
 	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	public String toString() {
-		return name;
+		return "Name: " + name +
+				"\nID: " + id + 
+				"\nAge: " + age + "\n";
 	}
 }
